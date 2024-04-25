@@ -6,18 +6,60 @@
 
 nav {
     text-align: center;
-    padding: 20px;
+    padding: 16px;
     background-color: white;
+    box-shadow: 0px 4px 1px 0px black;
 }
 
 #header nav img {
     height: 30px;
+    width: auto;
 }
 
 /* BEGINNING OF MAIN SECTION */
 
-/* LOCATION STYLING */
+/* LOCATION SECTION */
 
 #location {
+    background-color: #eaeaea;
+    text-align: center;
+    /* padding: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
+/* BOOK MENU SECTION */
+
+#book-menu {
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 20px;
+}
+
+#book-menu p {
+    font-weight: 100;
+}
+
+.btn {
+    border-radius: 30px;
+    margin: 20px;
+    padding: 18px;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    border: 0px;
+    font-size: 14px;
+    color: white;
+}
+
+/* HOW IT WORKS SECTION */
+
+#how-it-works {
+    padding: 20px;
+}
+
+/* RESTAURANTS SECTION */
+
+#restaurants {
+    background-color: #f6f6f6;
 }
