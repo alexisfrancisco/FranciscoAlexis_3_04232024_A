@@ -1,0 +1,23 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+/* HEADER STYLING */
+
+nav {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+#header nav img {
+    height: 30px;
+}
+
+/* BEGINNING OF MAIN SECTION */
+
+/* LOCATION STYLING */
+
+#location {
+
+}
