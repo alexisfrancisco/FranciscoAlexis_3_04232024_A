@@ -186,7 +186,7 @@ a {
 .heart:hover .fa-solid {
   /* display: block; */
   opacity: 1;
-  animation: heart 0.5s;
+  animation: heart 0.s;
 }
 
 @keyframes heart {
@@ -278,16 +278,55 @@ a {
 #menu-entre {
   display: grid;
   gap: 20px;
+  animation: fadeIn1 1s;
 }
 
 #menu-main {
   display: grid;
   gap: 20px;
+  animation: fadeIn2 2s;
 }
 
 #menu-desserts {
   display: grid;
   gap: 20px;
+  animation: fadeIn3 3.1s;
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .menu-item {
