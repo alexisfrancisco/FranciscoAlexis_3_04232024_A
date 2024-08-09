@@ -179,19 +179,15 @@ a {
   /* display: none; */
 }
 
-.heart:hover .fa-regular {
-  opacity: 1;
-}
-
 .heart:hover .fa-solid {
   /* display: block; */
   opacity: 1;
-  animation: heart 0.s;
+  animation: heart 1s;
 }
 
 @keyframes heart {
   0% {
-    scale: 0.5;
+    scale: 0;
   }
   100% {
     scale: 1;
