@@ -152,9 +152,23 @@ a {
   line-height: 10px;
 }
 
-.heart .fa-heart {
+.heart {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.card .heart .fa-heart {
   font-size: 30px;
-  margin: 14px;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+
+#menu-top .heart .fa-heart {
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
 }
 
 .heart .fa-solid {
@@ -162,15 +176,15 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  display: none;
+  /* display: none; */
 }
 
 .heart:hover .fa-regular {
-  display: none;
+  opacity: 1;
 }
 
 .heart:hover .fa-solid {
-  display: block;
+  /* display: block; */
   opacity: 1;
   animation: heart 0.5s;
 }
@@ -258,6 +272,7 @@ a {
 #menu-container #restaurant-name {
   font-family: "shrikhand", serif;
   font-size: 30pt;
+  margin-right: 50px;
 }
 
 #menu-entre {
