@@ -172,6 +172,16 @@ a {
 .heart:hover .fa-solid {
   display: block;
   opacity: 1;
+  animation: heart 0.5s;
+}
+
+@keyframes heart {
+  0% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 #footer {
