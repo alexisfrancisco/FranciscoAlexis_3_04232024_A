@@ -236,6 +236,25 @@ a {
   box-shadow: 0px 6px 8px 4px #eaeaea;
 }
 
+.card .new {
+  background-color: #99E2D0;
+  width: fit-content;
+  padding: 8px 32px;
+  border-radius: 4px;
+  color: #139273;
+  font-weight: 500;
+  position: absolute;
+  right: 40px;
+  translate: 0px 20px;
+  z-index: 10000;
+}
+
+.card .new p {
+  font-size: 14pt;
+  margin: 0px;
+}
+
+
 .card:hover {
   box-shadow: 0px 8px 10px 6px #dddddd;
 }
