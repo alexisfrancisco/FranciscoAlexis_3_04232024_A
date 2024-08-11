@@ -2,6 +2,39 @@
   font-family: "Roboto", sans-serif;
 }
 
+#body-index #header {
+  animation: afterLoad 0s 2200ms forwards;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+}
+
+#body-index #main {
+  animation: afterLoad 0s 2200ms forwards;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+}
+
+#body-index #footer {
+  animation: afterLoad 0s 2200ms forwards;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+}
+
+@keyframes afterLoad {
+  to   { 
+    visibility: visible; 
+    overflow: auto;
+    position: relative;
+    height: auto;
+  }
+}
+
 nav {
   text-align: center;
   padding: 30px 18px 12px 18px;
@@ -11,6 +44,56 @@ nav {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+#loading-screen {
+  color: #353535;
+  position: absolute;
+  visibility: visible; 
+  overflow: auto;
+  width: 100%;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f6f6f6;
+  min-height: 400px;
+  height: 100%;
+  margin: 0;
+  animation: beforeLoad 0s 2200ms forwards;
+}
+
+#loading-screen .fa-spinner{
+  font-size: 60pt;
+  animation: spinner 990ms;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  /* margin-bottom: 30px; */
+}
+
+#loading-screen h2{
+  margin: 0;
+  margin-top: 30px;
+}
+
+
+@keyframes beforeLoad {
+  to   { 
+    visibility: hidden; 
+    overflow: hidden;
+    position: absolute;
+    height: 0px;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
 
 #header nav img {
@@ -33,6 +116,7 @@ a {
   justify-content: center;
   gap: 10px;
   box-shadow: inset 0 8px 9px -7px lightgray;
+  font-size: 14pt;
 }
 
 #book-menu {
@@ -44,7 +128,9 @@ a {
   padding: 20px;
   gap: 20px;
   padding-bottom: 50px;
+  font-size: 14pt;
 }
+
 #book-menu p {
   font-weight: 100;
 }
@@ -66,7 +152,11 @@ a {
 }
 
 #how-it-works {
-  padding: 20px 20px 60px 20px;
+  padding: 20px 20px 110px 20px;
+}
+
+#how-it-works h2 {
+  font-size: 20pt;
 }
 
 #step-container {
@@ -76,13 +166,13 @@ a {
 
 .step {
   background-color: #f6f6f6;
-  padding: 10px 40px;
-  border-radius: 20px;
+  padding: 20px 40px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   gap: 20px;
   box-shadow: 0px 6px 8px 4px #eaeaea;
-  margin-left: 10px;
+  margin-left: 14px;
 }
 .step .circle {
   background-color: #9356dc;
@@ -96,6 +186,11 @@ a {
   left: 10px;
   margin-left: 10px;
 }
+
+.step p {
+  font-size: 14pt;
+}
+
 .step:hover {
   background-color: #f5edff;
 }
@@ -123,8 +218,13 @@ a {
 
 #restaurants {
   background-color: #f6f6f6;
-  padding: 30px 20px 60px 20px;
+  padding: 30px 20px 80px 20px;
 }
+
+#restaurants-heading {
+  font-size: 20pt;
+}
+
 #restaurants .container {
   display: grid;
   gap: 20px;
@@ -146,19 +246,28 @@ a {
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 .card .white-area {
-  padding: 0px 16px 8px 16px;
+  padding: 0px 16px 0px 16px;
   display: flex;
   justify-content: space-between;
 }
 .card .caption {
   line-height: 10px;
+}
+
+.card .caption h3 {
+  font-size: 16pt;
+}
+
+.card .caption p {
+  font-size: 16pt;
+  font-weight: 300;
 }
 
 .heart {
@@ -168,10 +277,10 @@ a {
 }
 
 .card .heart .fa-heart {
-  font-size: 30px;
+  font-size: 32px;
   position: absolute;
-  right: 20px;
-  bottom: 15px;
+  right: 10px;
+  bottom: 32px;
 }
 
 #menu-top .heart .fa-heart {
@@ -194,21 +303,21 @@ a {
 
 #footer {
   background-color: #353535;
-  padding: 20px;
-  /* position: absolute; */
-  /* z-index: 1001; */
-  /* bottom: 0;
-  width: 100%; */
+  padding: 30px;
+  font-size: 14pt;
 }
+
 #footer #logo {
   font-family: "shrikhand", serif;
-  font-size: 16px;
+  font-size: 18pt;
   color: white;
+  margin-top: 0;
 }
+
 #footer ul {
   list-style-type: none;
   padding-inline-start: 0px;
-  line-height: 25px;
+  line-height: 32px;
 }
 #footer ul li a {
   color: white;
@@ -225,34 +334,38 @@ a {
 
 /* MENU */
 #menu-palette {
+  box-shadow: inset 0 8px 9px -7px lightgray;
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: 110%; 
   background-repeat: no-repeat;
-  padding-top: 300px;
+  padding-top: 280px;
 }
 
 #menu-enchanted {
+  box-shadow: inset 0 8px 9px -7px lightgray;
   background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: contain; 
   background-repeat: no-repeat;
   background-position: 0px -150px;
-  padding-top: 300px;
+  padding-top: 280px;
 }
 
 #menu-bastille {
+  box-shadow: inset 0 8px 9px -7px lightgray;
   background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-size: 110%; 
   background-position: top;
   background-repeat: no-repeat;
-  padding-top: 300px;
+  padding-top: 280px;
 }
 
 #menu-gourmand {
+  box-shadow: inset 0 8px 9px -7px lightgray;
   background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-size: 110%;  
   background-position: top;
   background-repeat: no-repeat;
-  padding-top: 300px;
+  padding-top: 280px;
 }
 
 #menu-container {
@@ -262,7 +375,6 @@ a {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   width: 100%;
-  /* transform: translateY(-100px); */
   padding: 20px 20px 100px 20px;
   width: auto;
   height: auto;
